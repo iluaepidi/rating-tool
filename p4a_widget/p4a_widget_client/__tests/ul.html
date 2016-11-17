@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://ul.gpii.net/record?source=unified&sid=1421059432806-826608318 -->
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Unified Listing</title>
+        <!--<script src="/bc/jquery/dist/jquery.js"></script>-->
+
+        <script type="text/javascript" src="./Unified Listing_files/jquery.js"></script>
+
+        <script type="text/javascript" src="./Unified Listing_files/FluidDocument.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/Fluid.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/FluidDOMUtilities.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/FluidIoC.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/DataBinding.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/FluidView.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/URLUtilities.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/fastXmlPull.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/fluidParser.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/fluidRenderer.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/FluidRequests.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/ModelTransformation.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/ModelTransformationTransforms.js"></script>
+
+        <!-- Bring in Handlebars dependency -->
+        <script type="text/javascript" src="./Unified Listing_files/handlebars.js"></script>
+
+        <!-- Bring in Pagedown dependency -->
+        <script type="text/javascript" src="./Unified Listing_files/Markdown.Converter.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/Markdown.Sanitizer.js"></script>
+
+        <!-- Bring in template handling -->
+        <script type="text/javascript" src="./Unified Listing_files/helper.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/jsonify.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/equals.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/md-common.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/md-client.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/renderer.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/binder.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/hasRequiredOptions.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/ajaxCapable.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/templateManager.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/templateAware.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/templateMessage.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/templateFormControl.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/templateRequestAndRender.js"></script>
+
+        <!-- moment.js is required for our date handling -->
+        <script src="./Unified Listing_files/moment.js"></script>
+
+        <!-- Bring in common grades used to build multiple components in the Unified Listing -->
+        <script src="./Unified Listing_files/hasSkipNavLink.js"></script>
+
+        <!-- TODO:  Remove this once "updates" is updated -->
+        <script src="./Unified Listing_files/root.js"></script>
+
+        <!-- bring in javascript and styles from the gpii-express-user module -->
+        <script type="text/javascript" src="./Unified Listing_files/canHandleStrings.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/controls.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/forgot.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/login.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/passwordCheckingForm.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/reset.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/signup.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/resend.js"></script>
+        <link rel="stylesheet" href="./Unified Listing_files/user-controls.css">
+        <link rel="stylesheet" href="./Unified Listing_files/user-icons.css">
+
+
+        <!-- include foundation and its dependencies -->
+        <script src="./Unified Listing_files/modernizr.js"></script>
+        <script src="./Unified Listing_files/foundation.js"></script><meta class="foundation-data-attribute-namespace"><meta class="foundation-mq-xxlarge"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-large"><meta class="foundation-mq-medium"><meta class="foundation-mq-small"><style></style>
+        <script src="./Unified Listing_files/foundation.alert.js"></script>
+        <script src="./Unified Listing_files/foundation.topbar.js"></script>
+        <script src="./Unified Listing_files/foundation.dropdown.js"></script>
+        <script src="./Unified Listing_files/foundation.accordion.js"></script>
+
+        <link rel="stylesheet" href="./Unified Listing_files/normalize.css">
+        <link rel="stylesheet" href="./Unified Listing_files/foundation.css">
+        <link rel="stylesheet" href="./Unified Listing_files/general_foundicons.css">
+
+        <!-- include our styles -->
+        <link rel="stylesheet" href="./Unified Listing_files/ul.css">
+        <meta class="foundation-mq-topbar">
+    
+        
+        <!-- PARA INTEGRAR-->
+        <link href="src/css/widget.css" rel="stylesheet">
+        <!--<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>-->
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="src/js/widgetStrings.js"></script>
+        <script src="src/js/widgetConf.js"></script>
+        <script src="src/js/widget.js"></script>
+        <!-- FIN INTEGRAR-->
+    </head>
+    
+    <body id="fluid-id-1bzxr06a-133">
+        <a class="topbar-skip-link" href="#main" tabindex="0">Skip to Main Content</a>
+        <a class="topbar-skip-link" href="#widget" tabindex="0">Customer reviews</a>
+
+        <!-- TODO: Migrate this to a "content aware" part of the API when this feature is complete:  https://github.com/GPII/gpii-express/pull/6 -->
+        <div class="row collapse ul-topbar">
+            <div class="column large-9 medium-12 small-12">
+                <nav class="top-bar" data-topbar="" role="navigation">
+                    <ul class="title-area">
+                        <li class="name">
+                            <h1><a href="https://ul.gpii.net/">Unified Listing</a></h1>
+                        </li>
+                        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                        <li class="toggle-topbar menu-icon"><a href="https://ul.gpii.net/record?source=unified&amp;sid=1421059432806-826608318#"><span>Menu</span></a></li>
+                    </ul>
+
+
+                    <section class="top-bar-section">
+                        <ul class="center">
+                            <li class="active"><a href="https://ul.gpii.net/search">Search</a></li>
+                            <li><a href="https://ul.gpii.net/contributors">Contribute</a></li>
+                            <li><a href="https://ul.gpii.net/manufacturers">For Manufacturers</a></li>
+                            <li><a href="https://ul.gpii.net/databases">For Database Administrators</a></li>
+                        </ul>
+                    </section></nav>
+            </div>
+            <div class="column large-3 medium-12 small-12">
+                <div class="controls-viewport" id="fluid-id-1bzxr06a-192"><a class="user-controls-toggle" tabindex="0" onclick="loadusermenu();">
+                        <div class="button secondary expand small">
+                            <span class="user-icon-user"></span>
+                            <span id="username">Pablo</span>
+                        </div>
+                    </a>
+
+                    <div id="user-menu" class="user-menu" tabindex="0" style="display: none;z-index: 16000005;">
+                        <div class="controls-message"></div>
+                        <ul>
+							<li><a href="#" tabindex="0" onclick="selectuser(4)">Pablo</a></li>
+                            <li><a href="#" tabindex="1" onclick="selectuser(1)">Nacho</a></li>
+                            <li><a href="#" tabindex="2" onclick="selectuser(2)">Esteban</a></li>
+                            <li><a href="#" tabindex="3" onclick="selectuser(3)">Manuel</a></li>
+                        </ul>
+                    </div></div>
+            </div>
+        </div>
+
+        <section role="main" id="main" tabindex="0" class="scroll-container">
+            <div class="row">
+                <div class="record-viewport column small-12 medium-12"><!-- The main body -->
+                    <div class="record-error">
+                    </div>
+                    <div class="record-success"></div>
+
+                    <div class="record-viewport">
+                        <div class="record-view"><div class="row">
+                                <div class="column medium-6 small-12">
+                                    <h3>Jaws For Windows</h3>
+                                </div>
+                                <div class="column medium-6 small-12">
+                                    Status: new
+                                </div>
+                            </div>
+
+
+                            <div class="panel">
+                                <h3>Description</h3>
+
+                                Screen reader software.  Comprises: supports standard Windows office applications, Internet Explorer, Firefox, MSN Messenger, and Adobe Acrobat Reader, Lotus Symphony/Notes and others; outputs to refreshable Braille displays; multilingual synthesizer; supports Internet Explorer including links lists, frames lists, forms mode, reading HTML tables and graphic labels; supports dual monitors; interactive talking installation and basic training tutorial. Options include: standard edition for 32-bit or 64-bit versions of Windows 7 Home Premium, Windows Vista Home Premium, Windows Vista Home Basic and 32-bit Windows XP Home operating systems; professional edition for all 32-bit or 64-bit versions of Windows 7, Windows Vista, and Windows Server 2008 and 32-bit versions of Windows XP and Windows Server 2003. 
+                                Note: voice synthesizer requires a sound card compatible with the users version of Windows.<br><br>Price from (£): 659<br><br><br><br>Software<br>Adjust voice pitch: Standard <br>Adjust voice speed: Standard <br>Braille output: Standard <br>CD-Rom; USB Pen; Download: CD-Rom <br>Pronunciation correction: Standard <br>Read text with mouse over: Feature not available <br>Screen Zoom: Feature not available <br>Talking installation: Standard <br>Windows operating system: XP, Vista and 7
+                            </div>
+
+                            <h3>Manufacturer</h3>
+
+                            <ul class="vcard">
+                                <li class="fn">
+
+                                    Freedom Scientific
+
+                                </li>
+
+
+
+
+
+                                <li>
+
+
+
+                                </li>
+
+
+
+
+
+
+
+
+                            </ul>
+
+
+
+
+                            <h3>Sources</h3>
+
+
+                            <ul>
+
+                                <li>
+                                    <a href="https://ul.gpii.net/record?source=Dlf%20data&amp;sid=0109982" target="_blank">
+
+                                        Dlf data
+
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://ul.gpii.net/record?source=Hj%C3%A6lpemiddelbasen&amp;sid=4169" target="_blank">
+
+                                        Hjælpemiddelbasen
+
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://ul.gpii.net/record?source=Hulpmiddelenwijzer&amp;sid=124665" target="_blank">
+
+                                        Hulpmiddelenwijzer
+
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://ul.gpii.net/record?source=Vlibank&amp;sid=B812" target="_blank">
+
+                                        Vlibank
+
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://ul.gpii.net/record?source=Rehadat&amp;sid=C/00505" target="_blank">
+
+                                        Rehadat
+
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://ul.gpii.net/record?source=Siva&amp;sid=13614" target="_blank">
+
+                                        Siva
+
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://ul.gpii.net/record?source=Handicat&amp;sid=12011" target="_blank">
+
+                                        Handicat
+
+                                    </a>
+                                </li>
+
+                            </ul>
+
+
+
+
+                            <div class="row record-edit-control-panel" style="display:none;">
+                                <div class="column medium-offset-9 medium-3 small-12 right">
+                                    <button class="record-toggle expand">Edit Record</button>
+                                </div>
+                            </div>
+
+
+                            <div class="row record-suggest-control-panel" style="">
+                                <div class="column medium-offset-9 medium-3 small-12 right">
+
+                                    <a href="https://ul.gpii.net/login" class="button expand">Log in to Contribute a Change</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="record-edit" style="display: none"></div>
+                    </div>
+                </div>
+            </div></section>
+
+        <!-- Bring in client libraries-->
+        <script type="text/javascript" src="./Unified Listing_files/toggle.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/stringTemplate.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/select.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/status.js"></script>
+        <script type="text/javascript" src="./Unified Listing_files/record.js"></script>
+
+
+        <script type="text/javascript">
+            var gpii = fluid.registerNamespace("gpii");
+            var pageComponent = gpii.templates.templateManager
+                    ({
+                        "components": {
+                            "requireRenderer": {
+                                "options": {
+                                    "components": {
+                                        "pageComponent": {
+                                            "container": "body",
+                                            "options": {
+                                                "gradeNames": [
+                                                    "gpii.ul.hasSkipNavLink",
+                                                    "gpii.ul.hasUserControls"
+                                                ],
+                                                "req": {
+                                                    "query": {
+                                                        "source": "unified",
+                                                        "sid": "1421059432806-826608318"
+                                                    },
+                                                    "params": {
+                                                        "template": "record"
+                                                    }
+                                                }
+                                            },
+                                            "type": "gpii.ul.record"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+        </script>
+
+
+
+        <hr>
+        <div class="row">
+            <div class="column small-12 medium-4">
+                <h6>Raising the Floor - International</h6>
+                Geneva, 1204 Switzerland<br>
+                +41 22 518 07 95<br>
+                <a href="mailto:info@RaisingTheFloor.org">info@RaisingTheFloor.org</a>
+            </div>
+        </div>
+        
+
+	<!-- START WIDGET -->
+	<section id="widget" tabindex="0" class="scroll-container">
+		<div class="widget_stars" id="widget_stars">
+			<div id="loading"></div>
+			<div id="widget_content" class="widget_content">
+                <div id="rate">
+                    <h1 tabindex="0" class="h1"><span id="valuemedia_stars" class="widget_categorization" aria-hidden="true"></span><span id="starstext" class="visuallyhidden"></span> <span id="valuemedia"></span></h1>
+                </div>
+				<div class="separator"></div>
+				<div id="histogram" class="visuallyhidden">
+					<!--<a href="#" id="buttonHistogram">Show histogram</a>-->
+					<table>
+						<tr>
+							<th><a href="#listComments">1 <span class="visuallyhidden">Stars</span>&#9733;</a></th>
+							<td></td>
+						</tr>
+						<tr>
+							<th><a href="#listComments">2 <span class="visuallyhidden">Stars</span>&#9733;</a></th>
+							<td></td>
+						</tr>
+						<tr>
+							<th><a href="#listComments">3 <span class="visuallyhidden">Stars</span>&#9733;</a></th>
+							<td></td>
+						</tr>
+						<tr>
+							<th><a href="#listComments">4 <span class="visuallyhidden">Stars</span>&#9733;</a></th>
+							<td></td>
+						</tr>
+						<tr>
+							<th><a href="#listComments">5 <span class="visuallyhidden">Stars</span>&#9733;</a></th>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+
+				<div id="listComments" class="comments">
+					<ul id="widget_comments_ul">
+
+					</ul>
+				</div>
+				
+				<p class="alignright"><a id="morecomments" href="#" class="less">Less Comments</a></p>
+					
+				<div id="provideoyourrate" style="display:none;">
+					<h2>Provide Your Rate</h2>
+					<p>Your overall rating of this product</p>
+					<form action="">
+						<p class="widget_categorization widget_stars_rate">
+							<input id="widget_stars_rate_1" type="radio" name="widget_stars_rate" value="1" class="visuallyhidden" checked="checked">
+							<label for="widget_stars_rate_1" class="widget_label"><span class="visuallyhidden">1 Stars</span><span class="spanstar">&#9733</span></label>
+
+							<input id="widget_stars_rate_2" type="radio" name="widget_stars_rate" value="2" class="visuallyhidden">
+							<label for="widget_stars_rate_2" class="widget_label"><span class="visuallyhidden">2 Stars</span><span class="spanstar">&#9733</span></label>
+
+							<input id="widget_stars_rate_3" type="radio" name="widget_stars_rate" value="3" class="visuallyhidden">
+							<label for="widget_stars_rate_3" class="widget_label"><span class="visuallyhidden">3 Stars</span><span class="spanstar">&#9733</span></label>
+
+							<input id="widget_stars_rate_4" type="radio" name="widget_stars_rate" value="4" class="visuallyhidden">
+							<label for="widget_stars_rate_4" class="widget_label"><span class="visuallyhidden">4 Stars</span><span class="spanstar">&#9733</span></label>
+
+							<input id="widget_stars_rate_5" type="radio" name="widget_stars_rate" value="5" class="visuallyhidden">
+							<label for="widget_stars_rate_5" class="widget_label"><span class="visuallyhidden">5 Stars</span><span class="spanstar">&#9733</span></label>
+						</p>
+						
+						<label for="widget_title_comment">Title of your review</label>
+						<input type="text" name="widget_title_comment" id="widget_title_comment"/>
+						
+						<label for="widget_comment">Your review</label>
+						<textarea rows="2" cols="32" name="widget_comment" id="widget_comment"></textarea>
+						
+						<p class="aligncenter">
+							<button href="#" class="blue_button" id="buttonBack">Back</button>
+							<button class="green_button" id="buttonSend">Send</button>
+						</p>
+					</form>
+				</div>
+				<div id="provideoyourrateok" tabindex="-1">
+					<p>Thank you</p>
+					<p><a href="#" class="blue_button" id="buttonOk">Ok</a></p>
+				</div>
+					
+				<p id="buttonprovideoyourrate">
+					<a href="#" class="blue_button" id="buttonRate">Write a comment and rate it</a>
+					<a href="#" class="red_button" id="buttonDelete">Delete</a>
+				</p>
+				
+			</div>
+		</div>
+	</section>
+	<!-- START WIDGET -->
+         
+    </body></html>

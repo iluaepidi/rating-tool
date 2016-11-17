@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Helper
+ * Checks for role vendor in logged user.
+ */
+function p4a_widget_user_is_vendor(){
+    global $user;
+    if(in_array('Vendor', $user->roles)){
+        return TRUE;
+    }
+    return FALSE;
+}

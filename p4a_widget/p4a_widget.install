@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Imolements hook_install
+ */
+function p4a_widget_install(){
+    $role = new stdClass();
+    $role->name = 'Vendor';
+    user_role_save($role);
+    unset($role);
+    $role = new stdClass();
+    $role->name = 'Comment moderator';
+    user_role_save($role);
+}
+
+/**
+ * Implements hook_uninstall
+ */
+function p4a_widget_uninstall(){
+    user_role_delete('Vendor');
+    user_role_delete('Comment moderator');
+}

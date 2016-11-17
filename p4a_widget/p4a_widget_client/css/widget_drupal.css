@@ -1,0 +1,93 @@
+ /* Widget */
+.widget_stars{
+    color: #222;
+    font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 150%;
+}
+
+.widget_stars #histogram table th{
+	background-color:transparent;
+    color:#008cba;
+}
+
+.widget_stars #histogram table th a{
+    color:#008cba;
+}
+
+.widget_stars #histogram table th a:hover,
+#buttonprovideoyourrate a:hover,
+#morecomments:hover,
+.delete_reply:hover,
+.edit_reply:hover{
+   text-decoration:none;
+}
+
+/* Foundation */
+.widget_stars label {
+    color: #4d4d4d;
+    cursor: pointer;
+    display: block;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+.widget_stars input[type="radio"] + label {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    vertical-align: baseline;
+}
+.widget_stars input[type="text"], .widget_stars textarea {
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.75);
+    display: block;
+    font-family: inherit;
+    font-size: 0.875rem;
+    height: 2.3125rem;
+    margin: 0 0 1rem;
+    padding: 0.5rem;
+    transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
+    width: 100%;
+}
+.widget_stars input[type="text"]:focus, .widget_stars textarea:focus {
+    border-color: #999999;
+    box-shadow: 0 0 5px #999999;
+}
+.widget_stars input[type="text"]:focus, .widget_stars textarea:focus {
+    background: #fafafa none repeat scroll 0 0;
+    border-color: #999999;
+    outline: medium none;
+}
+.widget_stars input[type="text"]:disabled, .widget_stars textarea:disabled {
+    background-color: #ddd;
+    cursor: default;
+}
+.widget_stars textarea[rows] {
+    height: auto;
+}
+.widget_stars button {
+    background-color: #008cba;
+    border-color: #007295;
+    border-style: solid;
+    border-width: 0;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: normal;
+    margin: 0 0 1.25rem;
+    padding: 1rem 2rem 1.0625rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 300ms ease-out 0s;
+}

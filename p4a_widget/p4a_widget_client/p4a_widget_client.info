@@ -1,0 +1,12 @@
+name = P4A Rating client
+description = Rating and reviewing tool client.
+core = 7.x
+package = Prosperity4all
+
+dependencies[] = p4a_widget
+
+stylesheets[all][] = css/widget_drupal.css
+stylesheets[all][] = css/widget.css
+stylesheets[all][] = css/modaal.css
+
+configure = admin/config/widget/server
