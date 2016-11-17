@@ -1,8 +1,6 @@
 # rating-tool
 
-In order to install Drupal rating tool you need to dowload  zip file containing module files.
-
-You can install the module as you install any other modules. Uncompress and copy it to your site modules folder. You can install it using Drupal interface.
+You can install the module as you install any other modules. Copy it to your site modules folder.
  
 P4A server part has following dependencies:
 - Ctools
