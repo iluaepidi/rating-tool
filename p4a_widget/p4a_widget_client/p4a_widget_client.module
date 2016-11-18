@@ -1,0 +1,136 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function p4a_widget_client_menu(){
+    $items = array(
+        'admin/config/widget' => array(
+            'title' => 'Widget (P4A)',
+            'description' => 'Settings for widget module',
+            'position' => 'right',
+            'weight' => -10,
+            'page callback' => 'system_admin_menu_block_page',
+            'access arguments' => array('administer site configuration'),
+            'file' => 'system.admin.inc',
+            'file path' => drupal_get_path('module', 'system')
+        ),
+        'admin/config/widget/server' => array(
+            'title' => 'Server',
+            'description' => 'P4A server',
+            'page callback' => 'drupal_get_form',
+            'page arguments' => array('p4a_widget_client_server_admin'),
+            'access arguments' => array('administer site configuration'),
+            'file' => 'inc/controllers.admin.inc'
+        ),
+        'admin/config/widget/commentsoninit' => array(
+            'title' => 'Number of comments',
+            'description' => 'Number of comments showed on init',
+            'page callback' => 'drupal_get_form',
+            'page arguments' => array('p4a_widget_client_comments_on_init_admin'),
+            'access arguments' => array('administer site configuration'),
+            'file' => 'inc/controllers.admin.inc'
+        )
+    );
+    return $items;
+}
+
+/**
+ * Implements hook_init().
+ */
+function p4a_widget_client_init(){
+    global $user, $base_url;
+    drupal_add_js(
+        drupal_get_path('module', 'p4a_widget_client') . '/js/widgetStrings.js',
+        array(
+            'scope' => 'header',
+            'group' => JS_THEME,
+            'weight' => 100,
+        )
+    );
+    drupal_add_js(
+        "
+        var WidgetConf = {
+            url: '" . variable_get('p4a_server') . "',
+            app:  '" . $base_url . "',
+            user: " . $user->uid . ",
+            id: '" . current_path() . "',
+            isVendor: " . json_encode(p4a_widget_user_is_vendor()) . ",
+            strings : widgetStrings.value,
+            currentLocale : widgetStrings.locale,
+            commentsOnInit: " . variable_get('p4a_comments_on_init', 1) . "
+        };
+        ",
+        array(
+            'type' => 'inline',
+            'scope' => 'header',
+            'group' => JS_THEME,
+            'weight' => 200,
+        )
+    );
+    drupal_add_js(
+        drupal_get_path('module', 'p4a_widget_client') . '/js/widget.js',
+        array(
+            'scope' => 'header',
+            'group' => JS_THEME,
+            'weight' => 300,
+        )
+    );
+    drupal_add_js(
+        drupal_get_path('module', 'p4a_widget_client') . '/js/modaal.min.js',
+        array(
+            'scope' => 'header',
+            'group' => JS_THEME,
+            'weight' => 400,
+        )
+    );
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function p4a_widget_client_block_info(){
+    $blocks = array(
+        'rating' => array(
+            'info' => 'P4A - Rating'
+        ),
+        'comments' => array(
+            'info' => 'P4A - Comments'
+        )
+    );
+    return $blocks;
+}
+
+/**
+ * Implementa hook_block_view().
+ */
+function p4a_widget_client_block_view($delta = ''){
+    $block = array();
+    switch($delta){
+        case 'rating':
+            $block['subject'] = '';
+            $block['content'] = theme('rating', array());
+            break;
+        case 'comments':
+            $block['subject'] = '';
+            $block['content'] = theme('comments', array());
+            break;
+    }
+    return $block;
+}
+
+/*
+ * implementation of hook_theme
+ */
+function p4a_widget_client_theme() {
+    return array(
+        'rating' => array(
+            'variables' => array(),
+            'template' => 'templates/rating',
+        ),
+        'comments' => array(
+            'variables' => array(),
+            'template' => 'templates/comments',
+        ),
+    );
+}

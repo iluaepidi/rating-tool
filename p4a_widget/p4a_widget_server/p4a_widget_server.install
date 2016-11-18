@@ -1,0 +1,216 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function p4a_widget_server_uninstall(){
+    if($view = views_get_view('p4a_comments_moderation')){
+        $view->delete();
+    }
+    if($view = views_get_view('p4a_comment_detail')){
+        $view->delete();
+    }
+    variable_del('p4a_automoderation_flags');
+    variable_del('p4a_automoderation_approved');
+    variable_del('p4a_order');
+}
+
+/**
+ * Implements hook_schema()
+ * Create tables in database.
+ */
+function p4a_widget_server_schema(){
+    $schema = array(
+        'p4a_app' => array(
+            'fields' => array(
+                'id' => array(
+                    'type' => 'serial',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                ),
+                'name' => array(
+                    'type' => 'varchar',
+                    'length' => 45
+                ),
+                'description' => array(
+                    'type' => 'varchar',
+                    'length' => 1000
+                )
+            ),
+            'primary key' => array('id')
+        ),
+        'p4a_page' => array(
+            'fields' => array(
+                'id' => array(
+                    'type' => 'serial',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                ),
+                'ref' => array(
+                    'type' => 'varchar',
+                    'length' => 100,
+                    'not null' => TRUE
+                ),
+                'app' => array(
+                    'type' => 'int',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                )
+            ),
+            'primary key' => array('id')
+        ),
+        'p4a_user' => array(
+            'fields' => array(
+                'id' => array(
+                    'type' => 'serial',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                ),
+                'ref' => array(
+                    'type' => 'varchar',
+                    'length' => 100,
+                    'not null' => TRUE
+                ),
+                'approved' => array(
+                    'type' => 'int',
+                    'not null' => TRUE,
+                    'unsigned' => FALSE
+                ),
+                'rejected' => array(
+                    'type' => 'int',
+                    'not null' => TRUE,
+                    'unsigned' => FALSE
+                )
+            ),
+            'primary key' => array('id'),
+            'unique keys' => array(
+                'ref' => array('ref')
+            )
+        ),
+        'p4a_comment' => array(
+            'fields' => array(
+                'id' => array(
+                    'type' => 'serial',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                ),
+                'title' => array(
+                    'type' => 'varchar',
+                    'length' => 1000,
+                    'not null' => TRUE
+                ),
+                'comment' => array(
+                    'type' => 'varchar',
+                    'length' => 10000,
+                    'not null' => TRUE
+                ),
+                'user' => array(
+                    'type' => 'int',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                ),
+                'page' => array(
+                    'type' => 'int',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                ),
+                'date' => array(
+                    'mysql_type' => 'DATETIME',
+                    'not null' => TRUE
+                ),
+                'status' => array(
+                    'type' => 'int',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE,
+                    'size' => 'tiny'
+                )
+            ),
+            'primary key' => array('id')
+        ),
+        'p4a_generalranking' => array(
+            'fields' => array(
+                'id' => array(
+                    'type' => 'serial',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                ),
+                'page' => array(
+                    'type' => 'int',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                ),
+                'user' => array(
+                    'type' => 'int',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                ),
+                'value' => array(
+                    'type' => 'int',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                )
+            ),
+            'primary key' => array('id')
+        ),
+        'p4a_commentvaloration' => array(
+            'fields' => array(
+                'IdComment' => array(
+                    'type' => 'int',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                ),
+                'IdUser' => array(
+                    'type' => 'int',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                )
+            ),
+            'primary key' => array('IdComment', 'IdUser')
+        ),
+        'p4a_replycomment' => array(
+            'fields' => array(
+                'id' => array(
+                    'type' => 'serial',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                ),
+                'comment' => array(
+                    'type' => 'int',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                ),
+                'reply' => array(
+                    'type' => 'varchar',
+                    'length' => 10000,
+                    'not null' => TRUE
+                ),
+                'date' => array(
+                    'mysql_type' => 'DATETIME',
+                    'not null' => TRUE
+                ),
+                'user' => array(
+                    'type' => 'int',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                )
+            ),
+            'primary key' => array('id')
+        ),
+        'p4a_commentflag' => array(
+            'fields' => array(
+                'IdComment' => array(
+                    'type' => 'int',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                ),
+                'IdUser' => array(
+                    'type' => 'int',
+                    'not null' => TRUE,
+                    'unsigned' => TRUE
+                )
+            ),
+            'primary key' => array('IdComment', 'IdUser')
+        ),
+    );
+    return $schema;
+}

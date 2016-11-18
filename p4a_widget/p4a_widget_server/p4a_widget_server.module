@@ -1,0 +1,141 @@
+<?php
+
+module_load_include('inc', 'p4a_widget_server', 'inc/db');
+
+/**
+ * Implements hook_menu().
+ * Application controllers.
+ */
+function p4a_widget_server_menu(){
+    $items = array(
+        'widget/ControllerGetStar' => array(
+            'page callback'     => 'p4a_widget_server_get_star',
+            'delivery callback' => 'drupal_json_output',
+            'access callback'   => TRUE,
+            'file' => 'inc/controllers.inc',
+            'type' => MENU_CALLBACK,
+        ),
+        'widget/ControllerStar' => array(
+            'page callback'     => 'p4a_widget_server_star',
+            'delivery callback' => 'drupal_json_output',
+            'access callback'   => TRUE,
+            'file' => 'inc/controllers.inc',
+            'type' => MENU_CALLBACK,
+        ),
+        'widget/ControllerDeleteStar' => array(
+            'page callback'     => 'p4a_widget_server_delete_star',
+            'delivery callback' => 'drupal_json_output',
+            'access callback'   => TRUE,
+            'file' => 'inc/controllers.inc',
+            'type' => MENU_CALLBACK,
+        ),
+        'widget/ControllerReplyComment' => array(
+            'page callback'     => 'p4a_widget_server_reply_comment',
+            'delivery callback' => 'drupal_json_output',
+            'access callback'   => TRUE,
+            'file' => 'inc/controllers.inc',
+            'type' => MENU_CALLBACK,
+        ),
+        'widget/ControllerDeleteReply' => array(
+            'page callback'     => 'p4a_widget_server_delete_reply',
+            'delivery callback' => 'drupal_json_output',
+            'access callback'   => TRUE,
+            'file' => 'inc/controllers.inc',
+            'type' => MENU_CALLBACK,
+        ),
+        'widget/ControllerRateComment' => array(
+            'page callback'     => 'p4a_widget_server_rate_comment',
+            'delivery callback' => 'drupal_json_output',
+            'access callback'   => TRUE,
+            'file' => 'inc/controllers.inc',
+            'type' => MENU_CALLBACK,
+        ),
+        'widget/ControllerFlagComment' => array(
+            'page callback'     => 'p4a_widget_server_flag_comment',
+            'delivery callback' => 'drupal_json_output',
+            'access callback'   => TRUE,
+            'file' => 'inc/controllers.inc',
+            'type' => MENU_CALLBACK,
+        ),
+        /* Admin */
+        'admin/config/widget' => array(
+            'title' => 'Widget (P4A)',
+            'description' => 'Settings for widget module',
+            'position' => 'right',
+            'weight' => -10,
+            'page callback' => 'system_admin_menu_block_page',
+            'access arguments' => array('administer site configuration'),
+            'file' => 'system.admin.inc',
+            'file path' => drupal_get_path('module', 'system')
+        ),
+        'admin/config/widget/automoderation' => array(
+            'title' => 'Automoderation',
+            'description' => 'P4A moderation settings',
+            'page callback' => 'drupal_get_form',
+            'page arguments' => array('p4a_widget_server_moderation_admin'),
+            'access arguments' => array('administer site configuration'),
+            'file' => 'inc/controllers.admin.inc'
+        ),
+        'admin/config/widget/order' => array(
+            'title' => 'Order',
+            'description' => 'P4A order settings',
+            'page callback' => 'drupal_get_form',
+            'page arguments' => array('p4a_widget_server_order_admin'),
+            'access arguments' => array('administer site configuration'),
+            'file' => 'inc/controllers.admin.inc'
+        ),
+        /* Views actions */
+        'widget/moderation/comment/%/delete' => array(
+            'title' => 'Delete comment',
+            'page callback' => 'drupal_get_form',
+            'page arguments' => array('p4a_widget_server_views_delete_comment', 3),
+            'access callback' => TRUE,
+            'type' => MENU_CALLBACK,
+            'file' => 'inc/controllers.views.inc'
+        ),
+        'widget/moderation/comment/%/approve' => array(
+            'title' => 'Approve comment',
+            'page callback' => 'drupal_get_form',
+            'page arguments' => array('p4a_widget_server_views_approve_comment', 3),
+            'access callback' => TRUE,
+            'type' => MENU_CALLBACK,
+            'file' => 'inc/controllers.views.inc'
+        ),
+        'widget/moderation/comment/%/reject' => array(
+            'title' => 'Reject comment',
+            'page callback' => 'drupal_get_form',
+            'page arguments' => array('p4a_widget_server_views_reject_comment', 3),
+            'access callback' => TRUE,
+            'type' => MENU_CALLBACK,
+            'file' => 'inc/controllers.views.inc'
+        ),
+        'widget/moderation/comment/%/unapprove' => array(
+            'title' => 'Unapprove comment',
+            'page callback' => 'drupal_get_form',
+            'page arguments' => array('p4a_widget_server_views_unapprove_comment', 3),
+            'access callback' => TRUE,
+            'type' => MENU_CALLBACK,
+            'file' => 'inc/controllers.views.inc'
+        )
+    );
+    
+    return $items;
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function p4a_widget_server_views_api(){
+    return array(
+        'api' => 3,
+        'path' => drupal_get_path('module', 'p4a_widget_server') . '/views'
+    );
+}
+
+/**
+ * Mail
+ */
+function p4a_widget_server_mail($key, &$message, $params){
+    $message['subject'] = 'Rating tool';
+    $message['body'][] = 'You rmessage have been replied by a Vendor';
+}

@@ -1,0 +1,445 @@
+ /* Widget */
+.widget_stars{
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	z-index: 16000002;
+	width: 350px;
+	position: fixed;
+	top: 45px;
+	right:0px;
+	background-color: #fff;
+	border: 1px solid #b7bdb9;
+}
+/* New interface */
+#widget_stars_rate_part.widget_stars{
+	margin: 0px;
+	padding: 0px;
+	width:auto;
+	position:static;
+	background-color: #fff;
+	border:none;
+}
+
+#widget_stars_comments_part.widget_stars{
+	margin: 0px;
+	padding: 0px;
+	width:auto;
+	position:static;
+	background-color: #fff;
+	border:none;
+}
+#widget_stars_comments_part.widget_stars #widget_content{
+	/*border: 1px solid #b7bdb9;*/
+    border-top: 1px solid #b7bdb9;
+}
+#widget_stars_rate_part.widget_stars .separator{
+	display:none;
+}
+
+#widget_stars_rate_part.widget_stars #histogram{
+	width:96%;
+}
+
+#widget_stars_comments_part.widget_stars #histogram{
+	position:static;
+    width:40%;
+}
+
+
+#widget_stars_comments_part.widget_stars #histogram table{
+	/*position:absolute;*/
+	box-shadow:none;
+	width:100%;
+	border:none;
+	/*border-bottom: 1px solid #b7bdb9;*/
+}
+/* New interface */
+
+.widget_stars h1,
+.widget_stars .h1{
+	text-align: center;
+	/*margin-top: 15px;*/
+	font-weight: bold;
+	font-size: 18px;
+	/*margin-bottom: -0.5rem;*/
+}
+
+#widget_stars_rate_part.widget_stars h1,
+#widget_stars_rate_part.widget_stars .h1{
+	text-align: right;
+}
+
+.widget_stars h1 #valuemedia,
+.widget_stars .h1 #valuemedia{
+	font-size: 16px;
+}
+
+.widget_stars h1:focus,
+.widget_stars .h1:focus{
+	outline:1px solid #666;
+}
+
+.widget_stars .separator{
+	border-bottom: groove #000000;
+	width:23%;
+	margin:0px auto 0px auto;
+}
+
+.widget_stars #review_stars .stars{
+    font-size:30px;
+}
+
+.widget_stars #histogram{
+	position:absolute;
+	margin:0px;
+	text-align:center;
+	/*display:none;*/
+	overflow:hidden;
+	width:100%;
+	z-index:100;
+    padding:2px;
+}
+
+.widget_stars #histogram table{
+	/*position:absolute;*/
+	box-shadow:1px 1px 3px #ccc;
+	width:95%;
+	margin:auto;
+}
+
+.widget_stars #histogram table tr{
+    background-color:#fff;
+}
+
+.widget_stars #histogram table tr:hover,
+.widget_stars #histogram table tr.hover{
+    outline:1px solid #666;
+}
+
+.widget_stars #histogram table th{
+	width:15%;
+}
+
+.widget_stars #histogram table td div{
+	background-color:#ddd ;
+	border:1px solid #ccc;
+    display:inline-block;
+    width:75%;
+    margin-right:5px;
+}
+
+.widget_stars #histogram table td span{
+	background-color:#008cba ;
+	display:block;
+	color:#fff;
+	box-shadow:1px 1px 3px #ccc;
+}
+
+.widget_stars  #valoration_select h2{
+	color: #000;
+	margin: 10px;
+	border-bottom: 2px solid #000;
+	font-size: 16px;
+}
+
+.widget_stars #valoration{
+	width: 50px;
+	height: 40px;
+	font-size: 15px;
+}
+
+.widget_stars #listComments{
+	overflow: auto;
+	max-height:285px;
+}
+
+.widget_stars .comments{
+	margin: 10px;
+	border-bottom: 2px solid #000000;
+}
+
+.widget_stars .comments ul{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+
+.widget_stars .comments > ul  > li{
+	border-top:1px dashed #ccc;
+	padding:5px;
+	transition:background-color 2s;
+    position:relative;
+}
+
+.widget_stars .comments > ul > li:hover,
+.widget_stars .comments > ul > li:focus{
+	background-color:#f2f2f2;
+	border-radius:2px;
+}
+
+.widget_stars .comments > ul > li:first-child{
+	border-top:none;
+}
+
+.widget_stars .comments ul li span.date{
+	font-size:.875em;
+	color:#666;
+}
+
+.widget_stars .comments ul li span.like{
+	color:#c03;
+	padding-right:5px;
+}
+
+.widget_stars .comments ul li a span.like{
+	color:#666;
+}
+
+.widget_stars .comments ul li a:hover span.like,
+.widget_stars .comments ul li a:focus span.like{
+	text-shadow:1px 1px #666;
+    color:#000;
+}
+
+.widget_stars .comments ul li .flag_button{
+	color:#666;
+    font-size:1.5em;
+    position:absolute;
+    right:5px;
+    top:5px;
+}
+
+.widget_stars .comments ul li span.flag_button{
+	color:#c03;
+}
+
+.widget_stars .comments ul li a.flag_button:hover,
+.widget_stars .comments ul li a.flag_button:focus{
+	text-shadow:1px 1px #666;
+    color:#000;
+}
+
+.widget_stars .comments ul li a.reply_button{
+	/*margin-left:15px;*/
+    float:right;
+    clear:both;
+}
+
+.widget_stars .comments ul li ul{
+	margin-left:2em;
+	border-left:1px solid #b7bdb9;
+	padding-left:1em;
+}
+
+.widget_stars #morecomments{
+	color:#666;
+	font-size:.875em;
+	transition:color 2s;
+}
+
+.widget_stars #morecomments.less:after{
+	content:"\2212";
+	padding-left:5px;
+}
+
+.widget_stars #morecomments.more:after{
+	content:"\2b";
+	padding-left:5px;
+}
+
+.widget_stars #morecomments:hover,
+.widget_stars #morecomments:focus{
+	color:#000;
+}
+
+.widget_stars #provideoyourrate {
+	margin: 0px 10px;
+}
+
+.widget_stars #provideoyourrate h2{
+	color: #000;
+	margin: 10px 0px;
+	border-bottom: 2px solid #000000;
+	font-size: 16px;
+}
+
+.widget_stars #provideoyourrate h3{
+	color: #000;
+	margin: 10px 0px;
+	font-size: 14px;
+}
+
+.widget_stars #provideoyourrateok{
+	display:none;
+	text-align:center;
+}
+
+.widget_stars #provideoyourrateok > p:first-child{
+	/*background-color:#43ac6a; 
+	color:#fff;*/
+    font-weight:bold;
+	margin:0px 10px 20px 10px;
+	padding:50px 0px;
+}
+
+.widget_stars #buttonprovideoyourrate{
+	margin:0px 0px 25px 10px;
+}
+
+.widget_stars .blue_button{
+	color: #fff;
+	background-color: #337ab7;
+	border-color: #2e6da4;
+	padding: 6px 12px;
+    margin-right:5px;
+}
+
+.widget_stars .green_button{
+	color: #fff;
+	background-color: #006633;
+	border-color: #2e6da4;
+	padding: 6px 12px;
+    margin-right:5px;
+}
+
+.widget_stars .red_button{
+	color: #fff;
+	background-color: #666;
+	border-color: #2e6da4;
+	padding: 6px 12px;
+    margin-right:5px;
+}
+
+.widget_stars #buttonRate:before,
+.widget_stars .edit_reply:before{
+	content:"\270e";
+	padding-right:10px;
+}
+
+.widget_stars #buttonDelete:before,
+.widget_stars .delete_reply:before{
+	content:"\274c ";
+	padding-right:10px;
+}
+
+.widget_stars #buttonRate,
+.widget_stars #buttonDelete{
+	white-space:nowrap;
+	display:inline-block;
+	overflow:hidden;
+	/*width:38px;*/
+}
+
+.widget_stars #buttonRate:hover,
+.widget_stars #buttonDelete:hover,
+.widget_stars #buttonRate:focus,
+.widget_stars #buttonDelete:focus{
+	width:auto;
+}
+
+.widget_stars button:focus,
+.widget_stars a.blue_button:focus,
+.widget_stars a.green_button:focus,
+.widget_stars a.red_button:focus,
+.widget_stars button:hover,
+.widget_stars a.blue_button:hover,
+.widget_stars a.green_button:hover,
+.widget_stars a.red_button:hover{
+    outline:1px solid #333;
+    text-shadow:1px 1px #333;
+    /*color:#000;*/
+}
+
+/* Stars */
+.widget_stars .widget_categorization{
+	text-align:center;
+	font-size:30px;
+	margin-bottom:0px;
+}
+
+.widget_stars .widget_categorization .widget_label{ 
+	color: #000;
+	font-size: 50px;
+	margin: 0px !important;
+	position:relative;
+	border-bottom:2px dotted transparent;
+}
+/*
+.widget_stars .widget_categorization.widget_stars_value .widget_label{ 
+	font-size: 30px;
+	pointer-events: none;
+	cursor:pointer;
+}
+*/
+.widget_stars .widget_categorization input:focus + label{
+	border-bottom:2px dotted #666;
+}
+
+.widget_stars .widget_categorization input:checked ~ label{
+	color:#fff;
+}
+
+.widget_stars .widget_categorization input:checked ~ label:after{
+	color:#000;
+	content: "\2606";
+	position: absolute;
+	left: 0;
+}
+
+.widget_stars .widget_categorization input:checked + label{
+	color:#000;
+}
+
+.widget_stars .widget_categorization.widget_stars_rate:hover input + label{
+	color:#000 !important;
+}
+
+.widget_stars .widget_categorization.widget_stars_rate:hover input + label:after{
+	
+}
+
+.widget_stars .widget_categorization.widget_stars_rate label:hover ~ label,
+.widget_stars .widget_categorization.widget_stars_rate label:hover + label{
+	color:#fff !important;
+}
+
+.widget_stars .widget_categorization.widget_stars_rate label:hover ~ label:after,
+.widget_stars .widget_categorization.widget_stars_rate label:hover + label:after{
+	color:#000;
+	content: "\2606";
+	position: absolute;
+	left: 0;
+}
+
+.modaal-content-container p{
+    margin-right:50px;
+}
+
+/* Helpers */
+.visuallyhidden { 
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+}
+
+.alignright{
+	text-align:right;
+	margin-right:10px;
+}
+
+.aligncenter{
+	text-align:center;
+}
+
+.errors{
+    color: #cc0033;
+    font-weight:bold !important;
+    text-align:center;
+}
+
+.about{
+    font-size:.875em;
+    text-align:right;
+}

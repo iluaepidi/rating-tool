@@ -1,0 +1,443 @@
+# $Id$
+#
+# LANGUAGE translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  p4a_widget_server.module: n/a
+#  p4a_widget_server.info: n/a
+#  inc/controllers.admin.inc: n/a
+#  views/p4a_widget_server.views.inc: n/a
+#  inc/controllers.views.inc: n/a
+#  views/p4a_widget_server_handler_field_actions.inc: n/a
+#  views/p4a_widget_server.views_default.inc: n/a
+#  views/p4a_widget_server_handler_field_datetime.inc: n/a
+#  views/p4a_widget_server_handler_field_flagged.inc: n/a
+#  views/p4a_widget_server_handler_field_status.inc: n/a
+#  views/p4a_widget_server_handler_filter_status.inc: n/a
+#  views/p4a_widget_server_handler_sort_datetime.inc: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-09-29 19:15+0200\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: p4a_widget_server.module:55
+msgid "Widget (P4A)"
+msgstr ""
+
+#: p4a_widget_server.module:56
+msgid "Settings for widget module"
+msgstr ""
+
+#: p4a_widget_server.module:65
+msgid "Automoderation"
+msgstr ""
+
+#: p4a_widget_server.module:66
+msgid "P4A moderation settings"
+msgstr ""
+
+#: p4a_widget_server.module:73
+msgid "Order"
+msgstr ""
+
+#: p4a_widget_server.module:74
+msgid "P4A order settings"
+msgstr ""
+
+#: p4a_widget_server.module:82
+msgid "Delete comment"
+msgstr ""
+
+#: p4a_widget_server.module:90
+msgid "Approve comment"
+msgstr ""
+
+#: p4a_widget_server.module:98
+msgid "Reject comment"
+msgstr ""
+
+#: p4a_widget_server.module:106
+msgid "Unapprove comment"
+msgstr ""
+
+#: p4a_widget_server.info:0
+msgid "P4A Rating Server"
+msgstr ""
+
+#: p4a_widget_server.info:0
+msgid "Rating and reviewing tool server."
+msgstr ""
+
+#: p4a_widget_server.info:0
+msgid "Prosperity4all"
+msgstr ""
+
+#: inc/controllers.admin.inc:11
+msgid "Number of flags to unapprove comment"
+msgstr ""
+
+#: inc/controllers.admin.inc:17
+msgid "Number of approved comments for autoapprove comment"
+msgstr ""
+
+#: inc/controllers.admin.inc:30
+msgid "Order by"
+msgstr ""
+
+#: inc/controllers.admin.inc:32
+msgid "Likes"
+msgstr ""
+
+#: inc/controllers.admin.inc:33 views/p4a_widget_server.views.inc:100
+msgid "Date"
+msgstr ""
+
+#: inc/controllers.views.inc:17
+msgid "Are you sure you want to delete this item?"
+msgstr ""
+
+#: inc/controllers.views.inc:19
+msgid "This action cannot be undone."
+msgstr ""
+
+#: inc/controllers.views.inc:20 views/p4a_widget_server_handler_field_actions.inc:40
+msgid "Delete"
+msgstr ""
+
+#: inc/controllers.views.inc:21;51;83;115
+msgid "Cancel"
+msgstr ""
+
+#: inc/controllers.views.inc:47
+msgid "Are you sure you want to approve this comment?"
+msgstr ""
+
+#: inc/controllers.views.inc:50 views/p4a_widget_server_handler_field_actions.inc:31
+msgid "Approve"
+msgstr ""
+
+#: inc/controllers.views.inc:79
+msgid "Are you sure you want to reject this comment?"
+msgstr ""
+
+#: inc/controllers.views.inc:82 views/p4a_widget_server_handler_field_actions.inc:33
+msgid "Reject"
+msgstr ""
+
+#: inc/controllers.views.inc:111
+msgid "Are you sure you want to unapprove this comment?"
+msgstr ""
+
+#: inc/controllers.views.inc:114 views/p4a_widget_server_handler_field_actions.inc:37
+msgid "Unapprove"
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:44;189;207
+msgid "P4A Reviews"
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:46
+msgid "P4A Comments"
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:47
+msgid "Comments table."
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:61
+msgid "Comment ID"
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:62
+msgid "Comment ID."
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:74
+msgid "Title"
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:75
+msgid "Comment title."
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:87
+msgid "Comment"
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:88
+msgid "Comment."
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:101
+msgid "Comment date."
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:113
+msgid "Page ID"
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:114
+msgid "ID Page comment belongs to."
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:128;129;192
+msgid "Page"
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:133
+msgid "P4A User ID"
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:134
+msgid "ID user comment belongs to."
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:149;150
+msgid "P4A User"
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:155
+msgid "Status"
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:156
+msgid "Comment status."
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:193
+msgid "Page ref."
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:217
+msgid "User ID"
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:218
+msgid "User ID."
+msgstr ""
+
+#: views/p4a_widget_server.views.inc:232;233
+msgid "Drupal User"
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:116
+msgid "Master"
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:117
+msgid "P4A, Comments moderation"
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:118
+msgid "more"
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:119
+msgid "Apply"
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:120
+msgid "Reiniciar"
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:121
+msgid "Sort by"
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:122
+msgid "Asc"
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:123
+msgid "Desc"
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:124
+msgid "Página"
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:125
+msgid "ID del comentario"
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:126
+msgid "."
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:127
+msgid ","
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:128
+msgid "Título"
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:129
+msgid "Estado"
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:130
+msgid "Flagged"
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:131
+msgid "Acciones"
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:132
+msgid "Fecha"
+msgstr ""
+
+#: views/p4a_widget_server.views_default.inc:133
+msgid "Comments moderation"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:31
+msgid "@date_format format"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:36
+msgid "Date format"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:38;61
+msgid "Custom"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:39
+msgid "Time ago"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:40
+msgid "Time ago (with \"ago\" appended)"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:41
+msgid "Time ago (with \"ago\" appended) for today's date, but not for other dates"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:42
+msgid "Time hence"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:43
+msgid "Time hence (with \"hence\" appended)"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:44
+msgid "Time span (future dates have \"-\" prepended)"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:45
+msgid "Time span (past dates have \"-\" prepended)"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:46
+msgid "Time span (with \"ago/hence\" appended)"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:52
+msgid "Custom date format"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:53
+msgid "If \"Custom\", see the <a href=\"@url\" target=\"_blank\">PHP manual</a> for date formats. Otherwise, enter the number of different time units to display, which defaults to 2."
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:59
+msgid "Second date format"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:63
+msgid "The date format which will be used for rendering dates other than today."
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:69
+msgid "Custom date format of second date"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:70
+msgid "If \"Custom\" is selected in \"Second date format\", see the <a href=\"@url\" target=\"_blank\">PHP manual</a> for date formats. Otherwise, enter the number of different time units to display, which defaults to 2."
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:90
+msgid "Timezone"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:91
+msgid "Timezone to be used for date output."
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:92
+msgid "- Default site/user timezone -"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:114;119
+msgid "%time ago"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_datetime.inc:133
+msgid "%time hence"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_flagged.inc:12
+msgid "Yes"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_flagged.inc:14
+msgid "No"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_status.inc:10 views/p4a_widget_server_handler_filter_status.inc:6
+msgid "Unapproved"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_status.inc:11 views/p4a_widget_server_handler_filter_status.inc:7
+msgid "Rejected"
+msgstr ""
+
+#: views/p4a_widget_server_handler_field_status.inc:12 views/p4a_widget_server_handler_filter_status.inc:8
+msgid "Approved"
+msgstr ""
+
+#: views/p4a_widget_server_handler_sort_datetime.inc:30
+msgid "Granularity"
+msgstr ""
+
+#: views/p4a_widget_server_handler_sort_datetime.inc:32
+msgid "Second"
+msgstr ""
+
+#: views/p4a_widget_server_handler_sort_datetime.inc:33
+msgid "Minute"
+msgstr ""
+
+#: views/p4a_widget_server_handler_sort_datetime.inc:34
+msgid "Hour"
+msgstr ""
+
+#: views/p4a_widget_server_handler_sort_datetime.inc:35
+msgid "Day"
+msgstr ""
+
+#: views/p4a_widget_server_handler_sort_datetime.inc:36
+msgid "Month"
+msgstr ""
+
+#: views/p4a_widget_server_handler_sort_datetime.inc:37
+msgid "Year"
+msgstr ""
+
+#: views/p4a_widget_server_handler_sort_datetime.inc:39
+msgid "The granularity is the smallest unit to use when determining whether two dates are the same; for example, if the granularity is \"Year\" then all dates in 1999, regardless of when they fall in 1999, will be considered the same date."
+msgstr ""
+

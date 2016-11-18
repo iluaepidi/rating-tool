@@ -1,0 +1,17 @@
+name = P4A Rating Server
+description = Rating and reviewing tool server.
+core = 7.x
+package = Prosperity4all
+
+dependencies[] = p4a_widget
+dependencies[] = views
+
+files[] = views/p4a_widget_server_handler_field_datetime.inc
+files[] = views/p4a_widget_server_handler_field_actions.inc
+files[] = views/p4a_widget_server_handler_field_status.inc
+files[] = views/p4a_widget_server_handler_field_flagged.inc
+files[] = views/p4a_widget_server_handler_sort_datetime.inc
+files[] = views/p4a_widget_server_handler_filter_status.inc
+files[] = views/p4a_widget_server_handler_filter_flagged.inc
+
+configure = admin/config/widget/automoderation

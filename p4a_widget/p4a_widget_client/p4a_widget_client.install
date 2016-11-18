@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Implements hook_uninstall
+ */
+function p4a_widget_client_uninstall(){
+    variable_del('p4a_server');
+    variable_del('p4a_comments_on_init');
+}

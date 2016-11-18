@@ -1,0 +1,191 @@
+# $Id$
+#
+# LANGUAGE translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  p4a_widget_client.module: n/a
+#  inc/controllers.admin.inc: n/a
+#  p4a_widget_client.info: n/a
+#  js/widgetStrings.js: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-09-29 19:11+0200\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: p4a_widget_client.module:9
+msgid "Widget (P4A)"
+msgstr ""
+
+#: p4a_widget_client.module:10
+msgid "Settings for widget module"
+msgstr ""
+
+#: p4a_widget_client.module:19
+msgid "Server"
+msgstr ""
+
+#: p4a_widget_client.module:20 inc/controllers.admin.inc:9
+msgid "P4A server"
+msgstr ""
+
+#: p4a_widget_client.module:27 inc/controllers.admin.inc:23
+msgid "Number of comments"
+msgstr ""
+
+#: p4a_widget_client.module:28
+msgid "Number of comments showed on init"
+msgstr ""
+
+#: p4a_widget_client.info:0
+msgid "P4A Rating client"
+msgstr ""
+
+#: p4a_widget_client.info:0
+msgid "Rating and reviewing tool client."
+msgstr ""
+
+#: p4a_widget_client.info:0
+msgid "Prosperity4all"
+msgstr ""
+
+#: js/widgetStrings.js:0;0
+msgid "Customer reviews"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Customer review"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "out of"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Write your review"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Edit your review"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Delete your review"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Respond to review"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Send"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Back"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Cancel"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Comments"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Comment"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Stars"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Star"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "About"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Confirm"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Confirm action"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Do you really want to delete this comment?"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Do you really want to flag this comment?"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "More reviews"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Less reviews"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Your review of this product"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Your overall rating of this product"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Title of your review"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Write your review here"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Thank you! Review submitted."
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Edit reply"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Delete reply"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Please write a title and comment"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Flag content"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Flaged content"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Like content"
+msgstr ""
+
+#: js/widgetStrings.js:0
+msgid "Liked content"
+msgstr ""
+
