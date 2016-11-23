@@ -51,7 +51,7 @@ function p4a_widget_client_init(){
     drupal_add_js(
         "
         var WidgetConf = {
-            url: '" . variable_get('p4a_server') . "',
+            url: '" . variable_get('p4a_server', $base_url . '/widget/') . "',
             app:  '" . $base_url . "',
             user: " . $user->uid . ",
             id: '" . current_path() . "',

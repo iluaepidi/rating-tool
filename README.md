@@ -16,8 +16,6 @@ Rating API is required in order to install client and server part.
 
 Once modules are installed yuo need to configure them in the configuration section in your Drupal site.
 
-Te most importsnt setting is the P4A server. Iif server is installed in the same Drupal the setting shold be [your server]/widget/. Note the final slash.
-
 Others settings are self explained.  Order comments by likes or by date.  Number of comments that should be showed in comments list. Number of aproved comments for autoaprove and number of flags in a comment for auto unaprove comment.
 
 Server part contains the database tables and logic to store and serve the ratings and comments as well administrative interface for comments. As part of installation module will create two new roles in Drupal. Vendor and comment moderator.
