@@ -223,9 +223,23 @@
             $("#starstext").html(rating_text);
             $("#valuemedia").html(review_test);
             var stars_rate = '';
+			var int_part = Math.floor(data.value);
+			var dec_part = (data.value % 1);
+			var res_part = 5 - int_part - Math.ceil(dec_part);
+			for(var i = 1; i <= int_part; i++){
+				stars_rate += '<i class="fa fa-star"></i>';
+			}
+			if(dec_part > 0){
+				stars_rate += '<i class="fa fa-star-half-o"></i>';
+			}
+			for(var i = 1; i <= res_part; i++){
+				stars_rate += '<i class="fa fa-star-o"></i>';
+			}
+			/*
             for(var i = 1; i <= 5; i++){
                 stars_rate += (i <= data.value) ? '&#9733;' : '&#9734;';
             }
+			*/
             $("#valuemedia_stars").html(stars_rate);
             $('#review_stars').html('<span class="stars">' + stars_rate + '</span> <span class="visuallyhidden">' + rating_text + '</span> ' + $('#valuemedia a').text());
             $("#widget_comments_ul").empty();
