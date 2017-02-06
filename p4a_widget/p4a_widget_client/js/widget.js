@@ -157,6 +157,11 @@
                 WidgetUI.setWidgetStateWithRate(rate);
                 return false;
             });
+			
+            $('#histogram #reset-filter a').on('click', function(){
+                WidgetUI.setWidgetStateWithRate(0);
+                return false;
+            });
             
             /* New interface  ¿Integration? */
             $('#widget_stars_rate_part #rate, #widget_stars_comments_part #histogram').off('mouseover mouseout focus blur').find('a').off('focus blur');
@@ -272,7 +277,11 @@
                 WidgetUI.init = false;
                 WidgetUI.moreComments();
             }
+			$('#reset-filter').hide();
             WidgetUI.setHistogram(data.comments);
+			if(WidgetUI.activeRate != '0'){
+				$('#reset-filter').show();
+			}
         },
         addRateAndComment: function(){
             $('#errors p').remove();
