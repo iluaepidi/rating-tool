@@ -35,7 +35,7 @@ var widgetStrings = (function () {
       "FLAG CONTENT" : Drupal.t("Flag content"),
       "FLAGED CONTENT" : Drupal.t("Flaged content"),
       "LIKE CONTENT" : Drupal.t("Like comment"),
-      "LIKED CONTENT" : Drupal.t("Liked comment")
+      "LIKED CONTENT" : Drupal.t("Likes")
   };
   // var _locale = "en-UK";
   var _locale = "en-UK";

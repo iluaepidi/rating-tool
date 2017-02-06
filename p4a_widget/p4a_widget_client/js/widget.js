@@ -422,12 +422,13 @@
                 var like = $('<a href="#" class="like_button"><span class="like"><span class="visuallyhidden">' + WidgetConf.strings('LIKE CONTENT') + '</span>&#10084;</span></a>').data({IdComment:comment.id});
             }
             else{
-                var like = $('<span class="like"><span class="visuallyhidden">' + WidgetConf.strings('LIKED CONTENT') + '</span>&#10084;</span>').data({IdComment:comment.id});
+                var like = $('<span class="like">&#10084;</span>').data({IdComment:comment.id});
             }
 
             li.append(like);
             var likes = $('<span>').text(comment.rate);
             li.append(likes);
+			li.append('&nbsp;<span class="visuallyhidden">' + WidgetConf.strings('LIKED CONTENT') + '</span>');
             //Flag
             if(WidgetConf.user != 0){
                 if(!comment.userFlag){

@@ -186,6 +186,6 @@ msgid "Like comment"
 msgstr ""
 
 #: js/widgetStrings.js:0
-msgid "Liked comment"
+msgid "Likes"
 msgstr ""
 
