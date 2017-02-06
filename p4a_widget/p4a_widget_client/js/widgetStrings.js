@@ -34,8 +34,8 @@ var widgetStrings = (function () {
       "EMPTY FIELDS" : Drupal.t("Please write a title and comment"),
       "FLAG CONTENT" : Drupal.t("Flag content"),
       "FLAGED CONTENT" : Drupal.t("Flaged content"),
-      "LIKE CONTENT" : Drupal.t("Like content"),
-      "LIKED CONTENT" : Drupal.t("Liked content")
+      "LIKE CONTENT" : Drupal.t("Like comment"),
+      "LIKED CONTENT" : Drupal.t("Liked comment")
   };
   // var _locale = "en-UK";
   var _locale = "en-UK";
