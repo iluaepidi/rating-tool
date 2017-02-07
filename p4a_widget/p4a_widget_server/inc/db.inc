@@ -115,6 +115,14 @@ function p4a_widget_server_insert_flag($id_comment, $id_user){
 }
 
 /**
+ * Reset flags.
+ * Reset all flasg from comment
+ */
+function p4a_widget_server_reset_flags($id_comment){
+	db_delete('p4a_commentflag')->condition('IdComment', $id_comment)->execute();
+}
+
+/**
  * Update ranking
  */
 function p4a_widget_server_update_ranking($value, $page, $user){
