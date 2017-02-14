@@ -116,6 +116,14 @@ function p4a_widget_server_menu(){
             'access callback' => TRUE,
             'type' => MENU_CALLBACK,
             'file' => 'inc/controllers.views.inc'
+        ),
+        'widget/moderation/comment/%/reset-flags' => array(
+            'title' => 'Reset comment flags',
+            'page callback' => 'drupal_get_form',
+            'page arguments' => array('p4a_widget_server_views_delete_comment_flags', 3),
+            'access callback' => TRUE,
+            'type' => MENU_CALLBACK,
+            'file' => 'inc/controllers.views.inc'
         )
     );
     

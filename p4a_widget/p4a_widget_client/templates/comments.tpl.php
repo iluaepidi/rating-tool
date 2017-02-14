@@ -24,6 +24,7 @@
                 <td></td>
             </tr>
         </table>
+		<p id="reset-filter"><a href="#listComments"><span class="widgetStrings">RESET FILTER</span></a></p>
     </div>
     <p class="about"><a href="#about" class="inline"><span class="widgetStrings">ABOUT</span></a></p>
     <div id="widget_content" class="widget_content">

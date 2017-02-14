@@ -182,10 +182,10 @@ msgid "Flaged content"
 msgstr ""
 
 #: js/widgetStrings.js:0
-msgid "Like content"
+msgid "Like comment"
 msgstr ""
 
 #: js/widgetStrings.js:0
-msgid "Liked content"
+msgid "Likes"
 msgstr ""
 

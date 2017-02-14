@@ -133,3 +133,36 @@ function p4a_widget_server_views_unapprove_comment_submit($form, &$form_state){
     }
     $form_state['redirect'] = 'widget/comments/moderation';
 }
+
+/**
+ * Reset comments
+ * Delete all flags from comment
+ */
+function p4a_widget_server_views_delete_comment_flags($form, &$form_state, $id_comment){
+    $form = array();
+    $form['id_comment'] = array(
+        '#type' => 'value',
+        '#value' => $id_comment,
+    );
+
+    return confirm_form(
+        $form,
+        t('Are you sure you want to reset all flags from this comment?'),
+        'widget/comments/moderation',
+        t('This action cannot be undone.'),
+        t('Delete'),
+        t('Cancel')
+    );
+
+    return $form;
+}
+
+/**
+ * Reset comments
+ * Delete all flags from comment
+ */
+function p4a_widget_server_views_delete_comment_flags_submit($form, &$form_state){
+    $id_comment = $form_state['values']['id_comment'];
+    p4a_widget_server_reset_flags($id_comment);
+    $form_state['redirect'] = 'widget/comments/moderation';
+}

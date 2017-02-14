@@ -8,7 +8,7 @@ function p4a_widget_client_server_admin($form, &$form_state){
         '#type' => 'textfield',
         '#title' => t('P4A server'),
 		'#description' => t('Leave blank to use default server configuration (./widget/)'),
-        '#required' => TRUE,
+        '#required' => FALSE,
         '#default_value' => variable_get('p4a_server')
     );
 

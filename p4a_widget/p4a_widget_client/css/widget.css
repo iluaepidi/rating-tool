@@ -150,7 +150,7 @@
 }
 
 .widget_stars #listComments{
-	overflow: auto;
+	overflow-y: auto;
 	max-height:285px;
 }
 

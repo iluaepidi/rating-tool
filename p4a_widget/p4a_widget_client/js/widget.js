@@ -152,8 +152,14 @@
             });
             
             $('#histogram table a').on('click', function(){
-                var rate = $(this).parents('tr').index() + 1;
+				var real_rate = [5, 4, 3, 2, 1];
+				var rate = real_rate[$(this).parents('tr').index()];
                 WidgetUI.setWidgetStateWithRate(rate);
+                return false;
+            });
+			
+            $('#histogram #reset-filter a').on('click', function(){
+                WidgetUI.setWidgetStateWithRate(0);
                 return false;
             });
             
@@ -258,20 +264,24 @@
                 });
                 
                 if(n == 0){
-                    WidgetUI.setNoComments();
+                    WidgetUI.setNoComments(WidgetUI.activeRate);
                 }
                 if(n <= WidgetConf.commentsOnInit){
                     $("#morecomments").hide();
                 }
             }
             else{
-                WidgetUI.setNoComments();
+                WidgetUI.setNoComments(0);
             }
             if(WidgetUI.init){
                 WidgetUI.init = false;
                 WidgetUI.moreComments();
             }
+			$('#reset-filter').hide();
             WidgetUI.setHistogram(data.comments);
+			if(WidgetUI.activeRate != '0'){
+				$('#reset-filter').show();
+			}
         },
         addRateAndComment: function(){
             $('#errors p').remove();
@@ -400,8 +410,13 @@
                 $('#buttonDelete').hide();
             }
         },
-        setNoComments: function(){
-            var li = $('<li>').html('<strong>There are no comments with this rate yet</strong>');
+        setNoComments: function(n){
+			if(parseInt(n) != 0){
+				var li = $('<li>').html('<strong>There are no comments with ' + n + ' stars rate yet</strong>');
+			}
+			else{
+				var li = $('<li>').html('<strong>There are no comments yet</strong>');
+			}
             $("#widget_comments_ul").append(li);
             $("#morecomments").hide();
         },
@@ -422,12 +437,13 @@
                 var like = $('<a href="#" class="like_button"><span class="like"><span class="visuallyhidden">' + WidgetConf.strings('LIKE CONTENT') + '</span>&#10084;</span></a>').data({IdComment:comment.id});
             }
             else{
-                var like = $('<span class="like"><span class="visuallyhidden">' + WidgetConf.strings('LIKED CONTENT') + '</span>&#10084;</span>').data({IdComment:comment.id});
+                var like = $('<span class="like">&#10084;</span>').data({IdComment:comment.id});
             }
 
             li.append(like);
             var likes = $('<span>').text(comment.rate);
             li.append(likes);
+			li.append('&nbsp;<span class="visuallyhidden">' + WidgetConf.strings('LIKED CONTENT') + '</span>');
             //Flag
             if(WidgetConf.user != 0){
                 if(!comment.userFlag){
