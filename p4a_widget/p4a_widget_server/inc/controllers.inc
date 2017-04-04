@@ -159,3 +159,40 @@ function p4a_widget_server_flag_comment(){
     }
     return array('done' => TRUE);
 }
+
+/**
+ * Assign rate to nodes
+ */
+function p4a_widget_server_assign_rate_to_nodes($form, &$form_state){
+    $form['actions'] = array('#type' => 'actions');
+    $form['actions']['submit'] = array(
+        '#type' => 'submit',
+        '#value' => t('Assign rate to nodes')
+    );
+	return $form;
+}
+
+/**
+ * Assign rate to nodes
+ * Submit
+ */
+function p4a_widget_server_assign_rate_to_nodes_submit($form, &$form_state){
+	global $base_url;
+	$total = 0;
+	//drupal_set_message('<pre>' . print_r(p4a_widget_server_get_refs_by_app($base_url), TRUE) . '</pre>');
+	foreach(p4a_widget_server_get_refs_by_app($base_url) as $ref){
+		if(preg_match('/node\/([0-9]+)/', $ref, $matches)){
+			//drupal_set_message('<pre>' . print_r($matches, TRUE) . '</pre>');
+			$node = node_load($matches[1]);
+			if(isset($node->field_p4a_rating)){
+				//drupal_set_message('<pre>' . print_r($node, TRUE) . '</pre>');
+				$rating = p4a_widget_server_get_media_ranking($ref, $base_url);
+				//drupal_set_message('<pre>' . print_r($rating, TRUE) . '</pre>');
+				$node->field_p4a_rating[LANGUAGE_NONE][]['value'] = $rating;
+				node_save($node);
+				$total++;
+			}
+		}
+	}
+	drupal_set_message('Done. ' . $total . ' ratings assigned');
+}
