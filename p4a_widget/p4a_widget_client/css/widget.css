@@ -45,7 +45,16 @@
 	position:static;
     width:40%;
 }
-
+@media all and (max-width:48em){ /* 768 */
+	#widget_stars_comments_part.widget_stars #histogram{
+		width:70%;
+	}
+}
+@media all and (max-width:31.25em){ /* 500 */
+	#widget_stars_comments_part.widget_stars #histogram{
+		width:90%;
+	}
+}
 
 #widget_stars_comments_part.widget_stars #histogram table{
 	/*position:absolute;*/
@@ -87,7 +96,7 @@
 }
 
 .widget_stars #review_stars .stars{
-    font-size:30px;
+    font-size:22px;
 }
 
 .widget_stars #histogram{
@@ -121,6 +130,11 @@
 	width:15%;
 }
 
+.widget_stars #histogram table td{
+	padding:4px;
+	text-align:left;
+}
+
 .widget_stars #histogram table td div{
 	background-color:#ddd ;
 	border:1px solid #ccc;
@@ -151,7 +165,8 @@
 
 .widget_stars #listComments{
 	overflow-y: auto;
-	max-height:285px;
+	/* max-height:285px; */
+	max-height:450px;
 }
 
 .widget_stars .comments{
@@ -354,7 +369,7 @@
 /* Stars */
 .widget_stars .widget_categorization{
 	text-align:center;
-	font-size:30px;
+	font-size: 22px;
 	margin-bottom:0px;
 }
 

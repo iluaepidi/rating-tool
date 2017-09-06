@@ -403,3 +403,17 @@ function p4a_widget_server_gets_user_from_comment($id_comment){
     return $user_ref;
     
 }
+
+/**
+ * Gets refs by app
+ */
+function p4a_widget_server_get_refs_by_app($app){
+	$id_app = p4a_widget_server_get_app($app);
+    $sql = "SELECT DISTINCT(p.ref) FROM p4a_page p WHERE p.app = :app";
+    $results = db_query($sql, array(':app' => $id_app));
+    $refs = array();
+    foreach($results as $result){
+        $refs[] = $result->ref;
+    }
+    return $refs;
+}
