@@ -1,9 +1,9 @@
 var widgetStrings = (function () {
     
   var _values = {
-      TITLE : Drupal.t("Customer reviews"),
-      "CUSTOMER REVIEW" : Drupal.t("Customer review"),
-      "CUSTOMER REVIEWS" : Drupal.t("Customer reviews"),
+      TITLE : Drupal.t("Reviews"),
+      "CUSTOMER REVIEW" : Drupal.t("Review"),
+      "CUSTOMER REVIEWS" : Drupal.t("Reviews"),
       "OUT OF" : Drupal.t("out of"),
       CREATE : Drupal.t("Write your review"),
       READ : Drupal.t("Read"),

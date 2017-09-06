@@ -1,4 +1,4 @@
-<h1><span class="widgetStrings">TITLE</span></h1>
+<h2><span class="widgetStrings">TITLE</span></h2>
 <div class="widget_stars" id="widget_stars_comments_part">
     <p id="review_stars"></p>
     <div id="histogram" class="">
@@ -28,15 +28,15 @@
     </div>
     <p class="about"><a href="#about" class="inline"><span class="widgetStrings">ABOUT</span></a></p>
     <div id="widget_content" class="widget_content">
-        
+
         <div id="listComments" class="comments">
             <ul id="widget_comments_ul">
 
             </ul>
         </div>
-        
+
         <p class="alignright"><a id="morecomments" href="#" class="less"><span class="widgetStrings">LESS COMMENTS</span></a></p>
-            
+
         <div id="provideoyourrate" style="display:none;">
             <h2><span class="widgetStrings">LABEL REVIEW INTRO</span></h2>
             <p><span class="widgetStrings">LABEL STAR RATING</span></p>
@@ -57,10 +57,10 @@
                     <input id="widget_stars_rate_5" type="radio" name="widget_stars_rate" value="5" class="visuallyhidden">
                     <label for="widget_stars_rate_5" class="widget_label"><span class="visuallyhidden">5 <span class="widgetStrings">STARS</span></span><span class="spanstar">&#9733</span></label>
                 </p>
-                
+
                 <label for="widget_title_comment"><span class="widgetStrings">LABEL REVIEW TITLE</span></label>
                 <input type="text" name="widget_title_comment" id="widget_title_comment"/>
-                
+
                 <label for="widget_comment"><span class="widgetStrings">LABEL REVIEW BODY</span></label>
                 <textarea rows="2" cols="32" name="widget_comment" id="widget_comment"></textarea>
                 <div aria-live="polite" class="errors" id="errors"></div>
@@ -72,12 +72,12 @@
         </div>
         <div id="provideoyourrateok" tabindex="-1">
             <p><span class="widgetStrings">MESSAGE REVIEW OK</span></p>
-            <p><a href="#" class="blue_button" id="buttonOk">Ok</a></p>
+            <p><a href="#" class="blue_button btn btn-primary" id="buttonOk">Ok</a></p>
         </div>
         <?php if(user_is_logged_in()): ?>
             <p id="buttonprovideoyourrate">
                 <a href="#" class="red_button" id="buttonDelete"><span class="widgetStrings">DELETE</span></a>
-                <a href="#" class="blue_button" id="buttonRate"><span class="widgetStrings">CREATE</span></a>
+                <a href="#" class="blue_button btn btn-primary" id="buttonRate"><span class="widgetStrings">CREATE</span></a>
             </p>
         <?php endif; ?>
     </div>

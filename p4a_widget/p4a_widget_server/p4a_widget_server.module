@@ -124,6 +124,14 @@ function p4a_widget_server_menu(){
             'access callback' => TRUE,
             'type' => MENU_CALLBACK,
             'file' => 'inc/controllers.views.inc'
+        ),
+        'widget/moderation/assign-rating' => array(
+            'title' => 'Assign rating to nodes',
+            'page callback' => 'drupal_get_form',
+			'page arguments' => array('p4a_widget_server_assign_rate_to_nodes'),
+            'access callback' => TRUE,
+            'type' => MENU_CALLBACK,
+            'file' => 'inc/controllers.inc'
         )
     );
     
